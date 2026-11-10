@@ -1,8 +1,12 @@
-# Product Architecture Review
+# DecisionLens
 
-> **Give me a product. I’ll identify the architecture decisions you can defend — and the ones you can’t yet.**
+> **Evidence-bound product and UX decisions.**
 
-Product Architecture Review is a free agent skill for reviewing a landing page, SaaS/product interface, screenshots, or an early product concept through **consequential product and UX decisions** rather than generic audit checklists.
+**DecisionLens** is the public name of the frozen **Product Architecture Review V0** agent skill. It helps teams distinguish consequential product decisions from unsupported assumptions. The internal skill identifier remains `product-architecture-review` to preserve the tested V0 runtime and compatibility with the existing install ZIP.
+
+[Download the published V0 release](https://github.com/PeterxVarga/decisionlens-skill/releases/tag/v0) · [Worked examples](examples/) · [Benchmark evidence](benchmark/)
+
+DecisionLens is a free agent skill for reviewing a landing page, SaaS/product interface, screenshots, or an early product concept through **consequential product and UX decisions** rather than generic audit checklists.
 
 It does not promise the objectively best information architecture.
 
@@ -12,7 +16,7 @@ It tries to find the **strongest architecture defensible from the available evid
 
 Most AI product reviews are optimized to produce answers.
 
-Product Architecture Review is also allowed to conclude:
+DecisionLens is also allowed to conclude:
 
 - `SUPPORTED`
 - `REVISIT`
@@ -102,26 +106,20 @@ See [`templates/architecture-note.md`](templates/architecture-note.md).
 
 ### Codex
 
-Current Codex skill discovery supports user-installed skills under:
+Download the **install ZIP**, not the full source ZIP, from the [V0 GitHub Release](https://github.com/PeterxVarga/decisionlens-skill/releases/tag/v0). On Linux/macOS with `curl`, `unzip`, and `sha256sum`:
 
 ```bash
-$HOME/.agents/skills/
-```
-
-Install this repository as:
-
-```bash
+curl -fL https://github.com/PeterxVarga/decisionlens-skill/releases/download/v0/product-architecture-review-v0-install.zip -o product-architecture-review-v0-install.zip
+curl -fL https://github.com/PeterxVarga/decisionlens-skill/releases/download/v0/SHA256SUMS -o SHA256SUMS
+sha256sum -c SHA256SUMS --ignore-missing
 mkdir -p ~/.agents/skills
-cp -R product-architecture-review ~/.agents/skills/product-architecture-review
+unzip -q product-architecture-review-v0-install.zip -d ~/.agents/skills
+test -f ~/.agents/skills/product-architecture-review/SKILL.md
 ```
 
-Then restart Codex if the skill does not appear immediately.
+The installed folder and skill identifier intentionally remain **`product-architecture-review`**, even though the project is branded **DecisionLens**. Do not rename or edit the seven frozen runtime files for a cosmetic rebrand. Restart the agent if it does not discover the skill immediately.
 
-You can also place a repository-scoped copy under:
-
-```text
-<repo>/.agents/skills/product-architecture-review/
-```
+For a repository-scoped installation, extract the same archive inside `<repo>/.agents/skills/`. The source ZIP contains complete benchmark and example materials, but is not required for runtime installation.
 
 ### ChatGPT
 
@@ -134,7 +132,7 @@ The release is intentionally an ordinary Agent Skill directory: `SKILL.md` plus 
 You can invoke it explicitly:
 
 ```text
-Use Product Architecture Review on this SaaS.
+Use the product-architecture-review skill (DecisionLens) on this SaaS.
 I care about the navigation and operating model, not visual styling.
 ```
 
@@ -152,13 +150,13 @@ Or let an agent select it when its trigger description matches the task.
 
 ## Validation
 
-The exact V0 runtime in this repository was frozen and tested in a controlled **6-case × 3-lane blind hostile bake-off**.
+The exact V0 runtime (originally named Product Architecture Review) in this repository was frozen and tested in a controlled **6-case × 3-lane blind hostile bake-off**.
 
 Lanes:
 
 - **A** — same frontier model, no dedicated UX skill
 - **B** — preselected case-matched public UX/product-design skill
-- **C** — Product Architecture Review V0
+- **C** — Product Architecture Review V0 (now presented as DecisionLens)
 
 Result:
 
@@ -198,7 +196,7 @@ Frozen runtime ZIP SHA-256:
 21e7ade5125899a5c818f87fe758d64c2fa6a531ac25366ffbbd524d0d0a52f7
 ```
 
-The `Status: V0 EXPERIMENTAL` line inside `SKILL.md` is intentionally retained because changing the tested model-visible file would create a new candidate. The release wrapper is frozen for publication; the tested runtime itself is unchanged.
+The `Status: V0 EXPERIMENTAL` line and `name: product-architecture-review` inside `SKILL.md` are intentionally retained because changing the tested model-visible file would create a new candidate. The GitHub repository branding is not a new runtime version. The frozen benchmark-runtime ZIP digest above is **not** the SHA-256 of the downloadable install ZIP; verify release downloads using the `SHA256SUMS` asset.
 
 See [`RELEASE-AUTHORITY.md`](RELEASE-AUTHORITY.md).
 
@@ -214,6 +212,6 @@ MIT. See [`LICENSE`](LICENSE).
 
 ## Status
 
-**V0 FROZEN / PUBLICATION GATE OPEN**
+**V0 PUBLISHED / FROZEN** — GitHub release `v0` (2026-11-10). The original runtime identity and historical benchmark claims remain unchanged.
 
 The next evidence source is real-product use, not additional pre-release methodology expansion.
