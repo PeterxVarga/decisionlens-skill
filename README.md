@@ -109,9 +109,8 @@ See [`templates/architecture-note.md`](templates/architecture-note.md).
 Download the **install ZIP**, not the full source ZIP, from the [V0 GitHub Release](https://github.com/PeterxVarga/decisionlens-skill/releases/tag/v0). On Linux/macOS with `curl`, `unzip`, and `sha256sum`:
 
 ```bash
-curl -fL https://github.com/PeterxVarga/decisionlens-skill/releases/download/v0/product-architecture-review-v0-install.zip -o decisionlens-v0-install.zip
+curl -fL https://github.com/PeterxVarga/decisionlens-skill/releases/download/v0/product-architecture-review-v0-install.zip -o product-architecture-review-v0-install.zip
 curl -fL https://github.com/PeterxVarga/decisionlens-skill/releases/download/v0/SHA256SUMS -o SHA256SUMS
-mv decisionlens-v0-install.zip product-architecture-review-v0-install.zip
 sha256sum -c SHA256SUMS --ignore-missing
 mkdir -p ~/.agents/skills
 unzip -q product-architecture-review-v0-install.zip -d ~/.agents/skills
