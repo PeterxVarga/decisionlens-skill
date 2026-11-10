@@ -1,0 +1,34 @@
+{
+  "name": "product-architecture-review",
+  "release": "V0",
+  "status": "FROZEN / PUBLICATION GATE OPEN",
+  "runtime_authority_zip_sha256": "21e7ade5125899a5c818f87fe758d64c2fa6a531ac25366ffbbd524d0d0a52f7",
+  "runtime_files": {
+    "SKILL.md": "727324b2783884dc3f2d9a3aec8e73226216dec6f36021b45d10c85096427bc9",
+    "references/intake-and-routing.md": "3a3ec5e04a25939100b9820775b82d8a502d89822678582c19b3bc1709b2b174",
+    "references/product-and-ia-analysis.md": "2aefc3420a9c10adc82062d52636539231be9ed8d47883688eaa9d9b24e81b14",
+    "references/evidence-and-research.md": "571769c5fa783812a041235a5199f0d76f77699c93ca4ba17494405e99b79573",
+    "references/decision-adversary.md": "b2a489403324c720692b822a921efd911a04b153416329b3ec71e9e161b6561c",
+    "templates/architecture-note.md": "aee067a8b1d170877662935232826244fb8ece70219bcf51f5a55519a21dde19",
+    "templates/deep-review.md": "63a1913f5c9d9a39b7bf9dc5e9fc7d36f0f6fd11f74e511022ce1fec7ea7dc6f"
+  },
+  "wave01": {
+    "verdict": "PASS — PUBLISH V0",
+    "valid_executions": "18/18",
+    "evidence_integrity_fatals_lane_c": 0,
+    "material_wins_vs_baseline": "4/6",
+    "material_wins_vs_case_matched_public_comparator": "5/6",
+    "targeted_behavior_passes": "6/6"
+  },
+  "transparency": {
+    "cases": 6,
+    "anonymized_outputs": 18,
+    "blind_case_judgements": 6,
+    "includes_scoring_contract": true,
+    "includes_acceptance_contract": true,
+    "includes_comparator_authority": true,
+    "includes_final_verdict": true,
+    "includes_final_evidence_review": true
+  },
+  "note": "Only the seven runtime files above are claimed byte-identical to the tested V0 candidate. README, examples, benchmark presentation, launch copy, and other release packaging are public-release wrapper material."
+}

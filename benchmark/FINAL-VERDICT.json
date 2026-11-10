@@ -1,0 +1,50 @@
+{
+  "verdict": "PASS — PUBLISH V0",
+  "mechanical_gate": "PASS",
+  "mandatory_case_gate": "PASS",
+  "capability_gate": "PASS",
+  "authority_content_gate": "PASS",
+  "reason": "All gates pass: 18/18 valid executions; Lane C has zero evidence-integrity fatals; CASE-05 avoids false authenticated-IA certainty; CASE-04 obtains decisive operating-axis evidence before recommendation; CASE-06 makes the required Team-context reframe. C materially exceeds A on 4/6 and B on 5/6 cases, passes 6/6 targeted behaviors, and is publicly discussion-worthy on 6/6 outputs.",
+  "focused_revision_scope": [],
+  "aggregate_summary": {
+    "cases": {
+      "CASE-01": {
+        "lanes": {"B":{"anonymous_label":"X","weighted_total":83.75,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true},"A":{"anonymous_label":"Y","weighted_total":91.25,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true},"C":{"anonymous_label":"Z","weighted_total":100.0,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true}},
+        "C_over_A_material_on_both_core_axes": true,
+        "C_over_B_material_on_both_core_axes": true
+      },
+      "CASE-02": {
+        "lanes": {"C":{"anonymous_label":"X","weighted_total":100.0,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true},"B":{"anonymous_label":"Y","weighted_total":90.0,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true},"A":{"anonymous_label":"Z","weighted_total":95.0,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true}},
+        "C_over_A_material_on_both_core_axes": false,
+        "C_over_B_material_on_both_core_axes": false
+      },
+      "CASE-03": {
+        "lanes": {"A":{"anonymous_label":"X","weighted_total":62.5,"fatals":["F4 — presents a specific architecture as settled despite insufficient evidence to determine the optimal shared-page versus segmented-path design or exact ordering."],"targeted_behavior_pass":false,"publicly_discussion_worthy":true},"C":{"anonymous_label":"Y","weighted_total":100.0,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true},"B":{"anonymous_label":"Z","weighted_total":62.5,"fatals":["F4 — confidently selects a detailed architecture and final-CTA treatment in an intentionally underdetermined case without identifying the evidence needed to validate it."],"targeted_behavior_pass":false,"publicly_discussion_worthy":true}},
+        "C_over_A_material_on_both_core_axes": true,
+        "C_over_B_material_on_both_core_axes": true
+      },
+      "CASE-04": {
+        "lanes": {"C":{"anonymous_label":"X","weighted_total":100.0,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true},"B":{"anonymous_label":"Y","weighted_total":45.0,"fatals":["F1 — It asserts unprovided user behavior: agency staff “typically” begin with portfolio-wide attention discovery.","F4 — It confidently selects work-first without first obtaining the decisive operating-axis evidence."],"targeted_behavior_pass":false,"publicly_discussion_worthy":true},"A":{"anonymous_label":"Z","weighted_total":51.25,"fatals":["F4 — It confidently selects work-first without first obtaining the decisive operating-axis evidence."],"targeted_behavior_pass":false,"publicly_discussion_worthy":true}},
+        "C_over_A_material_on_both_core_axes": true,
+        "C_over_B_material_on_both_core_axes": true
+      },
+      "CASE-05": {
+        "lanes": {"A":{"anonymous_label":"X","weighted_total":63.75,"fatals":["F4 — It presents a fairly definitive authenticated navigation and explicitly recommends Contracts, Approvals, and Renewals as top-level despite the stated evidence gap."],"targeted_behavior_pass":false,"publicly_discussion_worthy":false},"B":{"anonymous_label":"Y","weighted_total":86.25,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true},"C":{"anonymous_label":"Z","weighted_total":100.0,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true}},
+        "C_over_A_material_on_both_core_axes": true,
+        "C_over_B_material_on_both_core_axes": true
+      },
+      "CASE-06": {
+        "lanes": {"A":{"anonymous_label":"X","weighted_total":87.5,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true},"C":{"anonymous_label":"Y","weighted_total":96.25,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true},"B":{"anonymous_label":"Z","weighted_total":77.5,"fatals":[],"targeted_behavior_pass":true,"publicly_discussion_worthy":true}},
+        "C_over_A_material_on_both_core_axes": false,
+        "C_over_B_material_on_both_core_axes": true
+      }
+    },
+    "lane_scores":{"A":[91.25,95.0,62.5,51.25,63.75,87.5],"B":[83.75,90.0,62.5,45.0,86.25,77.5],"C":[100.0,100.0,100.0,100.0,100.0,96.25]},
+    "C_vs_A_material_advantages":4,
+    "C_vs_B_material_advantages":5,
+    "C_targeted_passes":6,
+    "C_publicly_discussion_worthy":6,
+    "C_fatals":[],
+    "lane_mean_scores":{"A":75.21,"B":74.17,"C":99.38}
+  }
+}

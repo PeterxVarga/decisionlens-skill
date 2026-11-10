@@ -1,0 +1,12 @@
+{
+  "warning": "DO NOT GIVE THIS FILE TO THE BLIND ADJUDICATOR",
+  "seed": "8302026",
+  "mapping": {
+    "CASE-01": {"A": "Y", "B": "X", "C": "Z"},
+    "CASE-02": {"A": "Z", "B": "Y", "C": "X"},
+    "CASE-03": {"A": "X", "B": "Z", "C": "Y"},
+    "CASE-04": {"A": "Z", "B": "Y", "C": "X"},
+    "CASE-05": {"A": "X", "B": "Y", "C": "Z"},
+    "CASE-06": {"A": "X", "B": "Z", "C": "Y"}
+  }
+}
